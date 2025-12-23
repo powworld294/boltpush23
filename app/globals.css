@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 95.7%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 95.7%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 95.7%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 0%;
+    --radius: 0.5rem;
+
+    --gold-dark: #6B5D4F;
+    --gold-medium: #B8860B;
+    --gold-rich: #DAA520;
+    --gold-bright: #FFD700;
+    --gold-highlight: #FFF4D4;
+    --gold-shadow: #5C4F3D;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-white text-foreground antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes metallic-shine {
+  0% {
+    background-position: -200% center;
+  }
+  50% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes gold-pulse {
+  0%, 100% {
+    filter: brightness(1) contrast(1);
+  }
+  50% {
+    filter: brightness(1.1) contrast(1.05);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-metallic-shine {
+  animation: metallic-shine 4s ease-in-out infinite;
+}
+
+.metallic-gold {
+  background: linear-gradient(
+    135deg,
+    #5C4F3D 0%,
+    #6B5D4F 10%,
+    #B8860B 25%,
+    #DAA520 40%,
+    #FFD700 50%,
+    #FFF4D4 60%,
+    #FFD700 70%,
+    #DAA520 80%,
+    #B8860B 90%,
+    #5C4F3D 100%
+  );
+  background-size: 200% auto;
+}
+
+.metallic-gold-text {
+  background: linear-gradient(
+    135deg,
+    #6B5D4F 0%,
+    #B8860B 20%,
+    #DAA520 35%,
+    #FFD700 50%,
+    #FFF8DC 60%,
+    #FFD700 70%,
+    #DAA520 85%,
+    #6B5D4F 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.metallic-gold-border {
+  border-image: linear-gradient(
+    135deg,
+    #6B5D4F,
+    #B8860B,
+    #DAA520,
+    #FFD700,
+    #FFF4D4,
+    #FFD700,
+    #DAA520,
+    #B8860B,
+    #6B5D4F
+  ) 1;
+}
