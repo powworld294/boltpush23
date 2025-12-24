@@ -9,10 +9,6 @@ import Button from './Button';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/services', label: 'Services' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
@@ -70,7 +66,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a href="tel:+441234567890" className="flex items-center gap-2 text-black hover:text-gold transition-colors">
+            <a href="tel:01202 001771" className="flex items-center gap-2 text-black hover:text-gold transition-colors">
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">Call Us</span>
             </a>
@@ -117,11 +113,11 @@ export default function Navbar() {
               ))}
               <div className="pt-4 space-y-3">
                 <a
-                  href="tel:+441234567890"
+                  href="tel:01202 001771"
                   className="flex items-center gap-2 text-black hover:text-gold transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  <span className="font-medium">+44 1234 567890</span>
+                  <span className="font-medium">01202 001771</span>
                 </a>
                 <Button variant="primary" className="w-full" onClick={() => {
                   setIsOpen(false);

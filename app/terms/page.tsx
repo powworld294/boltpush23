@@ -1,5 +1,4 @@
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import Section from '@/components/Section';
 
 export const metadata = {
@@ -117,12 +116,12 @@ export default function Terms() {
                 For questions about these Terms and Conditions, please contact:
               </p>
               <p className="text-gray-600 leading-relaxed mt-4">
-                Pow Asbestos Ltd<br />
-                123 Construction Road<br />
-                London, UK<br />
-                SW1A 1AA<br />
-                Email: info@powasbestos.co.uk<br />
-                Phone: +44 1234 567890
+                Pow Property Asbestos Ltd<br />
+                1A-1B Hawkwood Road<br />
+                Boscombe, UK<br />
+                BH5 1DR<br />
+                Email: info@powpropertyasbestos.co.uk<br />
+                Phone: 01202 001771
               </p>
             </section>
           </div>
