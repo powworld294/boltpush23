@@ -202,9 +202,9 @@ export default function Home() {
               01202 001771
             </a>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-black text-lg font-semibold relative z-10">
-              <a href="mailto:Info@powasbestos.co.uk" className="flex items-center gap-2 hover:scale-105 transition-transform">
+              <a href="mailto:Info@powpropertyasbestos.co.uk" className="flex items-center gap-2 hover:scale-105 transition-transform">
                 <Mail className="w-6 h-6" />
-                Info@powasbestos.co.uk
+                Info@powpropertyasbestos.co.uk
               </a>
             </div>
             <div className="flex justify-center gap-6 mt-6 relative z-10">
@@ -345,7 +345,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl font-bold text-black mb-2">Comprehensive Coverage</h3>
                   <p className="text-gray-700">
-                    Covering all BH, SO, DT, BA and PO Postcodes across the South of England.
+                    Covering Bournemouth, Poole & surrounding areas.
                   </p>
                 </div>
               </div>
@@ -621,13 +621,13 @@ export default function Home() {
                 filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.8))',
               }}>Contact Us</h3>
               <p className="text-white mb-2">Phone: 01202 001771</p>
-              <p className="text-white mb-2">Email: Info@powasbestos.co.uk</p>
+              <p className="text-white mb-2">Email: Info@powpropertyasbestos.co.uk</p>
             </div>
             <div>
               <h3 className="font-bold text-xl mb-4 metallic-gold-text" style={{
                 filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.8))',
               }}>Coverage Area</h3>
-              <p className="text-white">BH, SO, DT, BA & PO Postcodes</p>
+              <p className="text-white">Covering Bournemouth, Poole & surrounding areas</p>
               <p className="text-white">South of England</p>
             </div>
             <div>
