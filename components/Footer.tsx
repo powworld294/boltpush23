@@ -46,19 +46,19 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-gold transition-colors">
+                <span className="text-gray-400">
                   About Us
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-gold transition-colors">
+                <span className="text-gray-400">
                   Services
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="/projects" className="text-gray-400 hover:text-gold transition-colors">
+                <span className="text-gray-400">
                   Projects
-                </Link>
+                </span>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-400 hover:text-gold transition-colors">
@@ -105,15 +105,14 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
                 <span className="text-gray-400">
-                  123 Construction Road<br />
-                  London, UK<br />
-                  SW1A 1AA
+                  1A-1B Hawkwood Road<br />
+                  Boscombe, BH5 1DR
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="tel:+441234567890" className="text-gray-400 hover:text-gold transition-colors">
-                  +44 1234 567890
+                <a href="tel:+441202001771" className="text-gray-400 hover:text-gold transition-colors">
+                  01202 001771
                 </a>
               </li>
               <li className="flex items-center gap-3">
