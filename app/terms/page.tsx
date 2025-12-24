@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import Section from '@/components/Section';
 
 export const metadata = {
@@ -121,7 +122,7 @@ export default function Terms() {
                 Boscombe, UK<br />
                 BH5 1DR<br />
                 Email: info@powpropertyasbestos.co.uk<br />
-                Phone: 01202 001771
+                Phone: 
               </p>
             </section>
           </div>
