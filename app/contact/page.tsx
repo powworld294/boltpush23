@@ -100,8 +100,8 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-heading font-bold mb-3">Phone</h3>
               <p className="text-gray-600 mb-2">Call us for immediate assistance</p>
-              <a href="tel:+441234567890" className="text-gold font-semibold hover:text-gold-dark">
-                +44 1234 567890
+              <a href="tel: 01202 001771" className="text-gold font-semibold hover:text-gold-dark">
+                01202 001771
               </a>
             </div>
           </AnimatedSection>
@@ -113,8 +113,8 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-heading font-bold mb-3">Email</h3>
               <p className="text-gray-600 mb-2">Send us a message anytime</p>
-              <a href="mailto:info@powasbestos.co.uk" className="text-gold font-semibold hover:text-gold-dark">
-                info@powasbestos.co.uk
+              <a href="mailto:info@powpropertyasbestos.co.uk" className="text-gold font-semibold hover:text-gold-dark">
+                info@powpropertyasbestos.co.uk
               </a>
             </div>
           </AnimatedSection>
@@ -126,9 +126,9 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-heading font-bold mb-3">Office</h3>
               <p className="text-gray-600">
-                123 Construction Road<br />
-                London, UK<br />
-                SW1A 1AA
+                1A-1B Hawkwood Road<br />
+                Boscombe<br />
+                BH5 1DR
               </p>
             </div>
           </AnimatedSection>

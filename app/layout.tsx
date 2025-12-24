@@ -55,7 +55,7 @@ const schemaData = {
   '@id': 'https://powpropertyasbestos.co.uk',
   url: 'https://powpropertyasbestos.co.uk',
   telephone: '+441202001771',
-  email: 'Info@powasbestos.co.uk',
+  email: 'Info@powpropertyasbestos.co.uk',
   address: {
     '@type': 'PostalAddress',
     addressRegion: 'South England',
