@@ -35,7 +35,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm'
+        isScrolled ? 'bg-black shadow-md' : 'bg-black/95 backdrop-blur-sm'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,15 +44,15 @@ export default function Navbar() {
             <div className="relative w-128 h-128">
               <Image
                 src="/pow_asbestos.jpg"
-                alt="Pow Asbestos Logo"
+                alt="Pow Property Asbestos Logo"
                 fill
                 className="object-contain"
                 priority
               />
             </div>
             <div className="hidden sm:block">
-              <span className="text-3xl font-heading font-bold text-black">Pow Asbestos</span>
-              <p className="text-sm text-gray-600">Property Services</p>
+              <span className="text-3xl font-heading font-bold text-gold">Pow Property Asbestos</span>
+              <p className="text-sm text-gray-300">Property Services</p>
             </div>
           </Link>
 
@@ -61,23 +61,23 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-black hover:text-gold transition-colors duration-200 font-medium"
+                className="text-white hover:text-gold transition-colors duration-200 font-medium"
               >
                 {link.label}
               </Link>
             ))}
-            <a href="tel:01202 001771" className="flex items-center gap-2 text-black hover:text-gold transition-colors">
+            <a href="tel:01202 001771" className="flex items-center gap-2 text-white hover:text-gold transition-colors">
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">Call Us</span>
             </a>
-            <Button variant="primary" size="sm" onClick={() => window.location.href = '/contact'}>
+            <Button variant="secondary" size="sm" onClick={() => window.location.href = '/contact'}>
               Request Quote
             </Button>
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-black hover:text-gold transition-colors"
+            className="lg:hidden p-2 text-white hover:text-gold transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -92,7 +92,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white border-t border-gray-200 overflow-hidden"
+            className="lg:hidden bg-black border-t border-gray-800 overflow-hidden"
           >
             <div className="container mx-auto px-4 py-6 space-y-4">
               {navLinks.map((link, index) => (
@@ -104,7 +104,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="block py-2 text-lg font-medium text-black hover:text-gold transition-colors"
+                    className="block py-2 text-lg font-medium text-white hover:text-gold transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}
@@ -114,12 +114,12 @@ export default function Navbar() {
               <div className="pt-4 space-y-3">
                 <a
                   href="tel:01202 001771"
-                  className="flex items-center gap-2 text-black hover:text-gold transition-colors"
+                  className="flex items-center gap-2 text-white hover:text-gold transition-colors"
                 >
                   <Phone className="w-5 h-5" />
                   <span className="font-medium">01202 001771</span>
                 </a>
-                <Button variant="primary" className="w-full" onClick={() => {
+                <Button variant="secondary" className="w-full" onClick={() => {
                   setIsOpen(false);
                   window.location.href = '/contact';
                 }}>
