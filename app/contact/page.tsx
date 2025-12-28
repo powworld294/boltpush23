@@ -73,7 +73,8 @@ export default function Contact() {
         body: payload,
       });
 
-      if (res.ok) {
+      // Treat 2xx and 3xx responses as success (Formspree may respond with a redirect)
+      if (res.status >= 200 && res.status < 400) {
         setSubmitStatus('success');
         setFormData({
           fullName: '',
@@ -309,6 +310,9 @@ export default function Contact() {
                 />
                 <p className="text-sm text-gray-500 mt-2">
                   Accepted formats: PDF, DOC, DOCX, JPG, PNG (Max 10MB)
+                </p>
+                <p className="text-sm text-yellow-600 mt-2">
+                  Note: the current Formspree form may not accept file uploads on the free plan. If you attach a file and the submission fails, remove the attachment or upgrade Formspree (or I can implement server-side uploads).
                 </p>
               </div>
 
