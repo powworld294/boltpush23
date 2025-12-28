@@ -72,29 +72,29 @@ export default function Footer() {
             <h3 className="text-lg font-heading font-bold mb-6">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services#abatement" className="text-gray-400 hover:text-gold transition-colors">
+                <span className="text-gray-400">
                   Asbestos Abatement
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="/services#management" className="text-gray-400 hover:text-gold transition-colors">
+                <span className="text-gray-400">
                   Management
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="/services#surveying" className="text-gray-400 hover:text-gold transition-colors">
+                <span className="text-gray-400">
                   Surveying
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="/services#education" className="text-gray-400 hover:text-gold transition-colors">
+                <span className="text-gray-400">
                   Education
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="/services#compliance" className="text-gray-400 hover:text-gold transition-colors">
+                <span className="text-gray-400">
                   Compliance & H&S
-                </Link>
+                </span>
               </li>
             </ul>
           </div>
