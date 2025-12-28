@@ -42,7 +42,7 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-48">
+        <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-4">
             {/* On contact page show text-only gold brand, else show logo + Pow Asbestos */}
             {isContact ? (
@@ -51,7 +51,7 @@ export default function Navbar() {
               </div>
             ) : (
               <>
-                <div className="relative w-128 h-128">
+                <div className="relative w-12 h-12">
                   <Image
                     src="/pow_asbestos.jpg"
                     alt="Pow Asbestos Logo"
