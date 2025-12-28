@@ -42,8 +42,8 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Formspree endpoint must be set in your Vercel environment as NEXT_PUBLIC_FORMSPREE_ENDPOINT
-    const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
+    // Formspree endpoint: prefer env var but fall back to provided endpoint
+    const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || 'https://formspree.io/f/mbdjykdp';
 
     if (!endpoint) {
       console.error('Formspree endpoint not configured: set NEXT_PUBLIC_FORMSPREE_ENDPOINT');
@@ -182,7 +182,7 @@ export default function Contact() {
               title="Tell Us About Your Project"
             />
             <form
-              action={process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT}
+              action={process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || 'https://formspree.io/f/mbdjykdp'}
               method="POST"
               encType="multipart/form-data"
               onSubmit={handleSubmit}
