@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Phone, Mail, MapPin, Clock, Star } from 'lucide-react';
@@ -35,23 +36,63 @@ export default function Contact() {
     }
   };
 
+  const router = useRouter();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Formspree endpoint must be set in your Vercel environment as NEXT_PUBLIC_FORMSPREE_ENDPOINT
+    const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
+
+    if (!endpoint) {
+      console.error('Formspree endpoint not configured: set NEXT_PUBLIC_FORMSPREE_ENDPOINT');
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setSubmitStatus('success');
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        service: '',
-        budget: '',
-        message: '',
-        file: null,
+      const payload = new FormData();
+      payload.append('name', formData.fullName);
+      payload.append('email', formData.email);
+      payload.append('phone', formData.phone);
+      payload.append('service', formData.service);
+      payload.append('budget', formData.budget);
+      payload.append('message', formData.message);
+
+      // Append file if present
+      if (formData.file) payload.append('file', formData.file);
+
+      // Honeypot field for spam protection (name _gotcha)
+      const hp = (document.getElementById('hp') as HTMLInputElement | null)?.value || '';
+      payload.append('_gotcha', hp);
+
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        body: payload,
       });
-    } catch (error) {
+
+      if (res.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          service: '',
+          budget: '',
+          message: '',
+          file: null,
+        });
+        // Redirect to thank-you page for tracking
+        router.push('/thank-you');
+        return;
+      }
+
+      console.error('Form submission failed', res.statusText);
+      setSubmitStatus('error');
+    } catch (err) {
+      console.error('Form submission error', err);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -140,7 +181,15 @@ export default function Contact() {
               subtitle="Request a Quote"
               title="Tell Us About Your Project"
             />
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              action={process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT}
+              method="POST"
+              encType="multipart/form-data"
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
+              {/* Honeypot for spam bots */}
+              <input type="text" id="hp" name="_gotcha" autoComplete="off" tabIndex={-1} className="hidden" />
               <div>
                 <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
                   Full Name *
