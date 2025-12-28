@@ -20,7 +20,6 @@ export default function Contact() {
     service: '',
     budget: '',
     message: '',
-    file: null as File | null,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -30,11 +29,7 @@ export default function Contact() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setFormData(prev => ({ ...prev, file: e.target.files![0] }));
-    }
-  };
+
 
   const router = useRouter();
 
@@ -61,8 +56,7 @@ export default function Contact() {
       payload.append('budget', formData.budget);
       payload.append('message', formData.message);
 
-      // Append file if present
-      if (formData.file) payload.append('file', formData.file);
+
 
       // Honeypot field for spam protection (name _gotcha)
       const hp = (document.getElementById('hp') as HTMLInputElement | null)?.value || '';
@@ -83,7 +77,6 @@ export default function Contact() {
           service: '',
           budget: '',
           message: '',
-          file: null,
         });
         // Redirect to thank-you page for tracking
         router.push('/thank-you');
@@ -296,25 +289,7 @@ export default function Contact() {
                 />
               </div>
 
-              <div>
-                <label htmlFor="file" className="block text-sm font-medium text-gray-700 mb-2">
-                  Attach Files (Optional)
-                </label>
-                <input
-                  type="file"
-                  id="file"
-                  name="file"
-                  onChange={handleFileChange}
-                  className="w-full px-4 py-3 border border-gray-300 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-colors bg-white"
-                  accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-                />
-                <p className="text-sm text-gray-500 mt-2">
-                  Accepted formats: PDF, DOC, DOCX, JPG, PNG (Max 10MB)
-                </p>
-                <p className="text-sm text-yellow-600 mt-2">
-                  Note: the current Formspree form may not accept file uploads on the free plan. If you attach a file and the submission fails, remove the attachment or upgrade Formspree (or I can implement server-side uploads).
-                </p>
-              </div>
+
 
               {submitStatus === 'success' && (
                 <motion.div
