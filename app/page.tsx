@@ -99,7 +99,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
           >
             <span
               className="inline-block metallic-gold-text"
@@ -117,7 +117,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="max-w-4xl mx-auto mb-12"
           >
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6 metallic-gold-text" style={{
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 metallic-gold-text" style={{
               filter: 'drop-shadow(0 0 10px rgba(218, 165, 32, 0.6))',
             }}>
               All Aspects of Asbestos Abatement & Management Undertaken
@@ -196,7 +196,7 @@ export default function Home() {
             </h2>
             <a
               href="tel:01202001771"
-              className="block text-5xl md:text-6xl font-bold text-black hover:scale-105 transition-transform my-6 relative z-10"
+              className="block text-4xl md:text-6xl font-bold text-black hover:scale-105 transition-transform my-6 relative z-10"
               style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.2)' }}
             >
               01202 001771
@@ -518,12 +518,12 @@ export default function Home() {
               borderWidth: '2px',
               boxShadow: '0 20px 80px rgba(218, 165, 32, 0.7), 0 0 100px rgba(255, 215, 0, 0.4)',
             }}>
-              <div className="relative w-full h-64 sm:h-96 md:h-[600px] lg:h-[1000px]">
+              <div className="relative w-full h-40 sm:h-64 md:h-[600px] lg:h-[1000px]">
                 <Image
                   src="/ebbf3790-ee9e-4d50-91ad-babebf3c62a8.png"
                   alt="Types of Asbestos - Chrysotile, Amosite, Crocidolite, Anthophyllite"
                   fill
-                  className="object-cover object-top"
+                  className="object-contain sm:object-cover object-top"
                   style={{ objectPosition: 'top' }}
                 />
               </div>
