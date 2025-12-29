@@ -518,13 +518,13 @@ export default function Home() {
               borderWidth: '2px',
               boxShadow: '0 20px 80px rgba(218, 165, 32, 0.7), 0 0 100px rgba(255, 215, 0, 0.4)',
             }}>
-              <div className="relative w-full h-40 sm:h-64 md:h-[600px] lg:h-[1000px]">
+              <div className="relative w-full h-72 sm:h-96 md:h-[600px] lg:h-[1000px]">
                 <Image
                   src="/ebbf3790-ee9e-4d50-91ad-babebf3c62a8.png"
                   alt="Types of Asbestos - Chrysotile, Amosite, Crocidolite, Anthophyllite"
                   fill
-                  className="object-contain sm:object-cover object-top"
-                  style={{ objectPosition: 'top' }}
+                  className="object-contain sm:object-cover object-center"
+                  style={{ objectPosition: 'center' }}
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
