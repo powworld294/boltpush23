@@ -155,7 +155,7 @@ export default function Home() {
               variant="secondary"
               size="lg"
               onClick={() => window.location.href = '/contact'}
-              className="font-bold text-lg px-8 py-6 text-black relative overflow-hidden group metallic-gold"
+              className="font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 text-black relative overflow-hidden group metallic-gold"
               style={{
                 border: 'none',
                 boxShadow: '0 8px 30px rgba(218, 165, 32, 0.6), 0 0 60px rgba(255, 215, 0, 0.3), inset 0 2px 10px rgba(255, 244, 212, 0.5)',
@@ -168,7 +168,7 @@ export default function Home() {
               variant="outline"
               size="lg"
               onClick={() => window.location.href = 'tel:01202001771'}
-              className="font-bold text-lg px-8 py-6 relative overflow-hidden group metallic-gold-border"
+              className="font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 relative overflow-hidden group metallic-gold-border"
               style={{
                 borderWidth: '3px',
                 color: '#FFD700',
@@ -518,7 +518,7 @@ export default function Home() {
               borderWidth: '2px',
               boxShadow: '0 20px 80px rgba(218, 165, 32, 0.7), 0 0 100px rgba(255, 215, 0, 0.4)',
             }}>
-              <div className="relative w-full" style={{ height: '1000px' }}>
+              <div className="relative w-full h-64 sm:h-96 md:h-[600px] lg:h-[1000px]">
                 <Image
                   src="/ebbf3790-ee9e-4d50-91ad-babebf3c62a8.png"
                   alt="Types of Asbestos - Chrysotile, Amosite, Crocidolite, Anthophyllite"
@@ -580,7 +580,7 @@ export default function Home() {
                 variant="secondary"
                 size="lg"
                 onClick={() => window.location.href = '/contact'}
-                className="text-black font-bold text-xl px-12 py-6 relative overflow-hidden group metallic-gold"
+                className="text-black font-bold text-xl px-6 py-3 sm:px-12 sm:py-6 relative overflow-hidden group metallic-gold"
                 style={{
                   border: 'none',
                   boxShadow: '0 10px 40px rgba(218, 165, 32, 0.7), 0 0 80px rgba(255, 215, 0, 0.4), inset 0 2px 15px rgba(255, 244, 212, 0.5)',
@@ -593,7 +593,7 @@ export default function Home() {
                 variant="outline"
                 size="lg"
                 onClick={() => window.location.href = 'tel:01202001771'}
-                className="font-bold text-xl px-12 py-6 metallic-gold-border"
+                className="font-bold text-xl px-6 py-3 sm:px-12 sm:py-6 metallic-gold-border"
                 style={{
                   borderWidth: '3px',
                   color: '#FFD700',

@@ -138,7 +138,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} pt-16 lg:pt-48`}>
         {children}
         <ExitIntentModal />
       </body>
