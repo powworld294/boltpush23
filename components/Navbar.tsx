@@ -42,16 +42,16 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-48">
+          <div className="flex items-center justify-between h-16 lg:h-48">
           <Link href="/" className="flex items-center space-x-4">
             {/* On contact page show text-only gold brand, else show logo + Pow Asbestos */}
             {isContact ? (
               <div className="hidden sm:block">
-                <span className="text-3xl font-heading font-bold text-gold">Pow Property Asbestos</span>
+                <span className="text-xl sm:text-3xl font-heading font-bold text-gold">Pow Property Asbestos</span>
               </div>
             ) : (
               <>
-                <div className="relative w-128 h-128">
+                <div className="relative w-10 h-10 sm:w-20 sm:h-20 md:w-32 md:h-32">
                   <Image
                     src="/pow_asbestos.jpg"
                     alt="Pow Asbestos Logo"
@@ -61,7 +61,7 @@ export default function Navbar() {
                   />
                 </div>
                 <div className="hidden sm:block">
-                  <span className="text-3xl font-heading font-bold text-black">Pow Asbestos</span>
+                  <span className="text-xl sm:text-3xl font-heading font-bold text-gold">Pow Property Asbestos</span>
                 </div>
               </>
             )}

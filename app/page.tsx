@@ -37,7 +37,7 @@ const AnimatedCounter = ({ end, duration = 2, suffix = '' }: { end: number; dura
 export default function Home() {
   return (
     <div className="min-h-screen bg-black">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16 lg:pt-48">
         <div className="absolute inset-0">
           <Image
             src="/asbestos_roof_sheet.jpg"
@@ -99,7 +99,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
           >
             <span
               className="inline-block metallic-gold-text"
@@ -117,7 +117,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="max-w-4xl mx-auto mb-12"
           >
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6 metallic-gold-text" style={{
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 metallic-gold-text" style={{
               filter: 'drop-shadow(0 0 10px rgba(218, 165, 32, 0.6))',
             }}>
               All Aspects of Asbestos Abatement & Management Undertaken
@@ -155,7 +155,7 @@ export default function Home() {
               variant="secondary"
               size="lg"
               onClick={() => window.location.href = '/contact'}
-              className="font-bold text-lg px-8 py-6 text-black relative overflow-hidden group metallic-gold"
+              className="font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 text-black relative overflow-hidden group metallic-gold"
               style={{
                 border: 'none',
                 boxShadow: '0 8px 30px rgba(218, 165, 32, 0.6), 0 0 60px rgba(255, 215, 0, 0.3), inset 0 2px 10px rgba(255, 244, 212, 0.5)',
@@ -168,7 +168,7 @@ export default function Home() {
               variant="outline"
               size="lg"
               onClick={() => window.location.href = 'tel:01202001771'}
-              className="font-bold text-lg px-8 py-6 relative overflow-hidden group metallic-gold-border"
+              className="font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 relative overflow-hidden group metallic-gold-border"
               style={{
                 borderWidth: '3px',
                 color: '#FFD700',
@@ -196,7 +196,7 @@ export default function Home() {
             </h2>
             <a
               href="tel:01202001771"
-              className="block text-5xl md:text-6xl font-bold text-black hover:scale-105 transition-transform my-6 relative z-10"
+              className="block text-4xl md:text-6xl font-bold text-black hover:scale-105 transition-transform my-6 relative z-10"
               style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.2)' }}
             >
               01202 001771
@@ -432,16 +432,7 @@ export default function Home() {
                 }} />
                 <p className="font-bold text-center text-sm metallic-gold-text">Protected by Peninsula</p>
               </div>
-              <div className="bg-black p-6 rounded-lg flex flex-col items-center justify-center h-40 col-span-2 md:col-span-1 metallic-gold-border" style={{
-                borderWidth: '3px',
-                boxShadow: '0 8px 30px rgba(218, 165, 32, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.1)',
-              }}>
-                <CheckCircle className="w-12 h-12 mb-2" style={{
-                  color: '#FFD700',
-                  filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.9))',
-                }} />
-                <p className="font-bold text-center text-sm metallic-gold-text">HSE Licensed</p>
-              </div>
+
             </div>
           </motion.div>
 
@@ -518,13 +509,13 @@ export default function Home() {
               borderWidth: '2px',
               boxShadow: '0 20px 80px rgba(218, 165, 32, 0.7), 0 0 100px rgba(255, 215, 0, 0.4)',
             }}>
-              <div className="relative w-full" style={{ height: '1000px' }}>
+              <div className="relative w-full h-72 sm:h-96 md:h-[600px] lg:h-[1000px]">
                 <Image
                   src="/ebbf3790-ee9e-4d50-91ad-babebf3c62a8.png"
                   alt="Types of Asbestos - Chrysotile, Amosite, Crocidolite, Anthophyllite"
                   fill
-                  className="object-cover object-top"
-                  style={{ objectPosition: 'top' }}
+                  className="object-contain sm:object-cover object-center"
+                  style={{ objectPosition: 'center' }}
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
@@ -580,7 +571,7 @@ export default function Home() {
                 variant="secondary"
                 size="lg"
                 onClick={() => window.location.href = '/contact'}
-                className="text-black font-bold text-xl px-12 py-6 relative overflow-hidden group metallic-gold"
+                className="text-black font-bold text-xl px-6 py-3 sm:px-12 sm:py-6 relative overflow-hidden group metallic-gold"
                 style={{
                   border: 'none',
                   boxShadow: '0 10px 40px rgba(218, 165, 32, 0.7), 0 0 80px rgba(255, 215, 0, 0.4), inset 0 2px 15px rgba(255, 244, 212, 0.5)',
@@ -593,7 +584,7 @@ export default function Home() {
                 variant="outline"
                 size="lg"
                 onClick={() => window.location.href = 'tel:01202001771'}
-                className="font-bold text-xl px-12 py-6 metallic-gold-border"
+                className="font-bold text-xl px-6 py-3 sm:px-12 sm:py-6 metallic-gold-border"
                 style={{
                   borderWidth: '3px',
                   color: '#FFD700',

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
+import ConversionClient from './ConversionClient';
 
 export default function ThankYou() {
   return (
@@ -30,6 +31,8 @@ export default function ThankYou() {
           </motion.div>
         </div>
       </section>
+
+      <ConversionClient value={1} currency="GBP" />
 
       <Footer />
     </div>
