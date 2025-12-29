@@ -37,7 +37,7 @@ const AnimatedCounter = ({ end, duration = 2, suffix = '' }: { end: number; dura
 export default function Home() {
   return (
     <div className="min-h-screen bg-black">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16 lg:pt-48">
         <div className="absolute inset-0">
           <Image
             src="/asbestos_roof_sheet.jpg"
