@@ -432,16 +432,7 @@ export default function Home() {
                 }} />
                 <p className="font-bold text-center text-sm metallic-gold-text">Protected by Peninsula</p>
               </div>
-              <div className="bg-black p-6 rounded-lg flex flex-col items-center justify-center h-40 col-span-2 md:col-span-1 metallic-gold-border" style={{
-                borderWidth: '3px',
-                boxShadow: '0 8px 30px rgba(218, 165, 32, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.1)',
-              }}>
-                <CheckCircle className="w-12 h-12 mb-2" style={{
-                  color: '#FFD700',
-                  filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.9))',
-                }} />
-                <p className="font-bold text-center text-sm metallic-gold-text">HSE Licensed</p>
-              </div>
+
             </div>
           </motion.div>
 

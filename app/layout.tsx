@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: '%s | Pow Property Asbestos',
   },
   description: 'Professional asbestos removal, abatement & management services. Commercial & residential projects across BH, SO, DT, BA, PO postcodes. Over 25 years experience, 2500+ successful jobs. ISO certified. Call 01202 001771 for free consultation.',
-  keywords: ['asbestos removal', 'asbestos survey', 'asbestos management', 'asbestos abatement', 'commercial asbestos removal', 'residential asbestos removal', 'South England asbestos', 'Bournemouth asbestos', 'Southampton asbestos', 'Dorchester asbestos', 'Bath asbestos', 'Portsmouth asbestos', 'ISO 9001', 'ISO 14001', 'ISO 45001', 'Peninsula protected', 'HSE licensed'],
+  keywords: ['asbestos removal', 'asbestos survey', 'asbestos management', 'asbestos abatement', 'commercial asbestos removal', 'residential asbestos removal', 'South England asbestos', 'Bournemouth asbestos', 'Southampton asbestos', 'Dorchester asbestos', 'Bath asbestos', 'Portsmouth asbestos', 'ISO 9001', 'ISO 14001', 'ISO 45001', 'Peninsula protected'],
   authors: [{ name: 'Pow Property Asbestos' }],
   openGraph: {
     type: 'website',

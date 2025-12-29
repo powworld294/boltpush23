@@ -62,7 +62,6 @@ const team = [
 ];
 
 const certifications = [
-  'HSE Licensed',
   'UKAS Accredited',
   'ISO 9001:2015',
   'ISO 14001:2015',

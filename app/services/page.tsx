@@ -74,7 +74,7 @@ const services = [
       'Refresher courses',
       'Bespoke training programs',
     ],
-    details: 'We offer a comprehensive range of asbestos training courses designed to meet the needs of building managers, contractors, and anyone who may encounter asbestos in their work. All our courses are delivered by experienced professionals and meet current HSE requirements.',
+    details: 'We offer a comprehensive range of asbestos training courses designed to meet the needs of building managers, contractors, and anyone who may encounter asbestos in their work. All our courses are delivered by experienced professionals and meet current regulatory requirements.',
   },
   {
     id: 'compliance',
