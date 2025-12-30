@@ -102,34 +102,36 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="fixed bottom-4 left-0 right-0 px-4 sm:static sm:px-0 z-30 pb-[env(safe-area-inset-bottom)]"
+            className="fixed bottom-0 left-0 right-0 px-0 sm:static sm:px-0 z-40 pb-[env(safe-area-inset-bottom)]"
           >
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-3xl mx-auto">
-              <Button
-                variant="secondary"
-                size="lg"
-                onClick={() => window.location.href = '/contact'}
-                className="w-full sm:w-auto font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 text-black relative overflow-hidden group"
-                style={{
-                  border: 'none'
-                }}
-              >
-                <span className="relative z-10 font-bold">Get Free Consultation</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => window.location.href = 'tel:01202001771'}
-                className="w-full sm:w-auto font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 relative overflow-hidden"
-                style={{
-                  borderWidth: '3px',
-                  color: '#FFD700'
-                }}
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                <span className="relative z-10">Call Now</span>
-              </Button>
+            <div className="max-w-3xl mx-auto">
+              <div className="flex flex-col gap-0">
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  onClick={() => window.location.href = '/contact'}
+                  className="w-full rounded-none py-4 font-bold text-lg text-black relative overflow-hidden group"
+                  style={{
+                    border: 'none',
+                    backgroundColor: '#FFD700'
+                  }}
+                >
+                  <span className="relative z-10 font-bold">Get Free Consultation</span>
+                </Button>
+                <Button
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.location.href = 'tel:01202001771'}
+                  className="w-full rounded-none py-4 font-bold text-lg text-[#FFD700] relative overflow-hidden"
+                  style={{
+                    border: 'none',
+                    backgroundColor: '#000'
+                  }}
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  <span className="relative z-10">Call Now</span>
+                </Button>
+              </div>
             </div>
           </motion.div>
 
@@ -137,7 +139,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="relative py-10 px-6 md:px-12 rounded-2xl overflow-hidden max-w-4xl mx-auto bg-white shadow-2xl"
+            className="relative py-10 px-6 md:px-12 rounded-2xl overflow-hidden max-w-4xl mx-auto metallic-gold text-black"
+            style={{ boxShadow: '0 20px 80px rgba(218, 165, 32, 0.7), 0 0 120px rgba(255, 215, 0, 0.4) inset, inset 0 5px 20px rgba(255, 248, 220, 0.5)' }}
           >
             <Phone className="w-16 h-16 mx-auto mb-4 text-black" />
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-2 relative z-10">
