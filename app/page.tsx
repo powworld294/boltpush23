@@ -37,7 +37,7 @@ const AnimatedCounter = ({ end, duration = 2, suffix = '' }: { end: number; dura
 export default function Home() {
   return (
     <div className="min-h-screen bg-black">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16 lg:pt-48">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-6 lg:pt-8">
         <div className="absolute inset-0">
           <Image
             src="/asbestos_roof_sheet.jpg"
@@ -83,7 +83,7 @@ export default function Home() {
             transition={{ duration: 1, ease: 'easeOut' }}
             className="mb-12"
           >
-            <div className="relative w-64 h-64 mx-auto mb-8">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-4 sm:mb-8">
               <div className="absolute inset-0 bg-gradient-to-br from-[#B8860B] via-[#FFD700] to-[#DAA520] opacity-30 blur-3xl rounded-full animate-pulse"></div>
               <Image
                 src="/pow_asbestos.jpg"
@@ -149,13 +149,13 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-10 absolute bottom-6 left-0 right-0 px-4 sm:static sm:px-0 z-20"
           >
             <Button
               variant="secondary"
               size="lg"
               onClick={() => window.location.href = '/contact'}
-              className="font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 text-black relative overflow-hidden group metallic-gold"
+              className="w-full sm:w-auto font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 text-black relative overflow-hidden group metallic-gold"
               style={{
                 border: 'none',
                 boxShadow: '0 8px 30px rgba(218, 165, 32, 0.6), 0 0 60px rgba(255, 215, 0, 0.3), inset 0 2px 10px rgba(255, 244, 212, 0.5)',
@@ -168,7 +168,7 @@ export default function Home() {
               variant="outline"
               size="lg"
               onClick={() => window.location.href = 'tel:01202001771'}
-              className="font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 relative overflow-hidden group metallic-gold-border"
+              className="w-full sm:w-auto font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 relative overflow-hidden group metallic-gold-border"
               style={{
                 borderWidth: '3px',
                 color: '#FFD700',
@@ -285,7 +285,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.8, duration: 1 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hidden sm:block"
         >
           <div className="w-8 h-12 rounded-full flex justify-center p-2 metallic-gold-border" style={{
             borderWidth: '3px',

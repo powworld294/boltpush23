@@ -120,7 +120,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
       <head>
-        <meta name="viewport" content="width=1024, initial-scale=1" />
         {/* Google gtag (set NEXT_PUBLIC_GTAG_ID in env). Add consent checks before firing conversions if required. */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTAG_ID ?? 'AW-16718539346'}`}
