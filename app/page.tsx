@@ -51,7 +51,7 @@ export default function Home() {
 
 
 
-        <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl lg:max-w-2xl">
+        <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-2xl lg:max-w-xl">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -73,7 +73,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-4xl font-bold leading-tight text-white mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-3xl font-bold leading-tight text-white mb-4"
           >
             <span className="inline-block metallic-gold-text">POW PROPERTY ASBESTOS</span>
           </motion.h1>
@@ -102,15 +102,15 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="fixed bottom-0 left-0 right-0 px-0 sm:static sm:px-0 z-40 pb-[env(safe-area-inset-bottom)]"
+            className="fixed bottom-0 left-0 right-0 px-0 sm:static sm:px-0 sm:mb-12 md:mb-16 lg:mb-20 z-40 pb-[env(safe-area-inset-bottom)]"
           >
             <div className="max-w-2xl mx-auto">
-              <div className="flex flex-col gap-0">
+              <div className="flex flex-col sm:flex-row sm:justify-center sm:gap-4 gap-0">
                 <Button
                   variant="secondary"
                   size="lg"
                   onClick={() => window.location.href = '/contact'}
-                  className="w-full rounded-none py-4 font-bold text-lg text-black relative overflow-hidden group"
+                  className="w-full sm:w-auto sm:rounded-lg py-3 sm:py-4 font-bold text-lg text-black relative overflow-hidden group"
                   style={{
                     border: 'none',
                     backgroundColor: '#FFD700'
@@ -122,7 +122,7 @@ export default function Home() {
                   variant="primary"
                   size="lg"
                   onClick={() => window.location.href = 'tel:01202001771'}
-                  className="w-full rounded-none py-4 font-bold text-lg text-[#FFD700] relative overflow-hidden"
+                  className="w-full sm:w-auto sm:rounded-lg py-3 sm:py-4 font-bold text-lg text-[#FFD700] relative overflow-hidden"
                   style={{
                     border: 'none',
                     backgroundColor: '#000'
@@ -139,17 +139,17 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="relative py-10 px-6 md:px-12 rounded-2xl overflow-hidden max-w-3xl mx-auto metallic-gold text-black"
-            style={{ boxShadow: '0 20px 80px rgba(218, 165, 32, 0.7), 0 0 120px rgba(255, 215, 0, 0.4) inset, inset 0 5px 20px rgba(255, 248, 220, 0.5)' }}
+            className="relative py-8 px-6 md:px-10 rounded-2xl overflow-hidden max-w-2xl mx-auto metallic-gold text-black"
+            style={{ boxShadow: '0 16px 60px rgba(218, 165, 32, 0.55)' }}
           >
             <Phone className="w-16 h-16 mx-auto mb-4 text-black" />
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-2 relative z-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-black mb-2 relative z-10">
               CALL NOW FOR FREE CONSULTATION
             </h2>
             <a
               href="tel:01202001771"
-              className="block text-3xl md:text-5xl font-bold text-black hover:scale-105 transition-transform my-6 relative z-10"
-              style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.2)' }}
+              className="block text-2xl md:text-4xl font-bold text-black hover:scale-105 transition-transform my-6 relative z-10"
+              style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.12)' }}
             >
               01202 001771
             </a>
