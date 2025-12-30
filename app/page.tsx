@@ -37,7 +37,7 @@ const AnimatedCounter = ({ end, duration = 2, suffix = '' }: { end: number; dura
 export default function Home() {
   return (
     <div className="min-h-screen bg-black">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-6 lg:pt-8 pb-24 sm:pb-0">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-6 lg:pt-8 pb-16 sm:pb-0">
         <div className="absolute inset-0">
           <Image
             src="/asbestos_roof_sheet.jpg"
@@ -51,7 +51,7 @@ export default function Home() {
 
 
 
-        <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl lg:max-w-3xl">
+        <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl lg:max-w-2xl">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -73,7 +73,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-bold leading-tight text-white mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-4xl font-bold leading-tight text-white mb-4"
           >
             <span className="inline-block metallic-gold-text">POW PROPERTY ASBESTOS</span>
           </motion.h1>
@@ -82,7 +82,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="max-w-4xl mx-auto mb-12"
+            className="max-w-3xl mx-auto mb-12"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 metallic-gold-text">All Aspects of Asbestos Abatement & Management Undertaken</h2>
             <div className="space-y-4 text-white text-lg md:text-xl">
@@ -104,7 +104,7 @@ export default function Home() {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="fixed bottom-0 left-0 right-0 px-0 sm:static sm:px-0 z-40 pb-[env(safe-area-inset-bottom)]"
           >
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-2xl mx-auto">
               <div className="flex flex-col gap-0">
                 <Button
                   variant="secondary"
@@ -139,7 +139,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="relative py-10 px-6 md:px-12 rounded-2xl overflow-hidden max-w-4xl mx-auto metallic-gold text-black"
+            className="relative py-10 px-6 md:px-12 rounded-2xl overflow-hidden max-w-3xl mx-auto metallic-gold text-black"
             style={{ boxShadow: '0 20px 80px rgba(218, 165, 32, 0.7), 0 0 120px rgba(255, 215, 0, 0.4) inset, inset 0 5px 20px rgba(255, 248, 220, 0.5)' }}
           >
             <Phone className="w-16 h-16 mx-auto mb-4 text-black" />
@@ -148,7 +148,7 @@ export default function Home() {
             </h2>
             <a
               href="tel:01202001771"
-              className="block text-4xl md:text-6xl font-bold text-black hover:scale-105 transition-transform my-6 relative z-10"
+              className="block text-3xl md:text-5xl font-bold text-black hover:scale-105 transition-transform my-6 relative z-10"
               style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.2)' }}
             >
               01202 001771
@@ -176,7 +176,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.4, duration: 1 }}
-            className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto mt-12"
+            className="grid md:grid-cols-3 gap-8 max-w-2xl mx-auto mt-12"
           >
             <div className="bg-gradient-to-br from-gray-900 to-black rounded-lg overflow-hidden relative p-8 metallic-gold-border"
               style={{
@@ -184,7 +184,7 @@ export default function Home() {
                 boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
               }}
             >
-              <div className="text-3xl sm:text-4xl font-bold mb-2 metallic-gold-text">
+              <div className="text-2xl sm:text-3xl font-bold mb-2 metallic-gold-text">
                 <AnimatedCounter end={500} suffix="+" />
               </div>
               <p className="text-white text-lg">Successful Asbestos Removal Jobs</p>
@@ -207,7 +207,7 @@ export default function Home() {
                 boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
               }}
             >
-              <div className="text-3xl sm:text-4xl font-bold mb-2 metallic-gold-text">
+              <div className="text-2xl sm:text-3xl font-bold mb-2 metallic-gold-text">
                 <AnimatedCounter end={25} suffix="+" />
               </div>
               <p className="text-white text-lg">Years Experience in Asbestos Industry</p>
@@ -219,7 +219,7 @@ export default function Home() {
                 boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
               }}
             >
-              <div className="text-3xl sm:text-4xl font-bold mb-2 metallic-gold-text">
+              <div className="text-2xl sm:text-3xl font-bold mb-2 metallic-gold-text">
                 <AnimatedCounter end={100} suffix="%" />
               </div>
               <p className="text-white text-lg">Client Satisfaction Rate</p>
@@ -258,10 +258,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
               Why Choose <span className="metallic-gold-text">Pow Asbestos</span>?
             </h2>
-            <div className="max-w-4xl mx-auto space-y-6 text-left">
+            <div className="max-w-3xl mx-auto space-y-6 text-left">
               <div className="flex items-start gap-4 bg-gray-50 p-6 rounded-lg border-l-4" style={{
                 borderLeftColor: '#DAA520',
                 boxShadow: '-4px 0 15px rgba(0,0,0,0.06)',
@@ -323,7 +323,7 @@ export default function Home() {
             className="text-center"
           >
             <h3 className="text-3xl font-bold text-black mb-8">Our Accreditations & Partners</h3>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center max-w-5xl mx-auto mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center max-w-3xl mx-auto mb-16">
               <div className="bg-black p-6 rounded-lg flex flex-col items-center justify-center h-40 metallic-gold-border" style={{
                 borderWidth: '3px',
                 boxShadow: '0 8px 20px rgba(0,0,0,0.25)',
@@ -360,7 +360,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+            className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto"
           >
             <div className="md:col-span-2">
               <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
@@ -407,10 +407,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Understanding <span className="metallic-gold-text">Asbestos Types</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Knowledge is key to safety. Learn about the different types of asbestos and why professional identification and removal is essential.
             </p>
           </motion.div>
@@ -419,7 +419,7 @@ export default function Home() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
+            className="max-w-3xl mx-auto"
           >
             <div className="relative rounded-2xl overflow-hidden metallic-gold-border shadow-2xl" style={{
               borderWidth: '2px',
@@ -472,9 +472,9 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Ready to Work With the <span className="metallic-gold-text">Best in the South</span>?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
