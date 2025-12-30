@@ -37,7 +37,7 @@ const AnimatedCounter = ({ end, duration = 2, suffix = '' }: { end: number; dura
 export default function Home() {
   return (
     <div className="min-h-screen bg-black">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-6 lg:pt-8 pb-16 sm:pb-0">
+      <section className="relative min-h-[60vh] lg:min-h-[55vh] flex items-start lg:items-center justify-center overflow-hidden bg-black pt-4 lg:pt-6 pb-12 sm:pb-0">
         <div className="absolute inset-0">
           <Image
             src="/asbestos_roof_sheet.jpg"
@@ -58,7 +58,7 @@ export default function Home() {
             transition={{ duration: 1, ease: 'easeOut' }}
             className="mb-6"
           >
-            <div className="relative w-40 h-40 sm:w-64 sm:h-64 mx-auto mb-2 sm:mb-8 -mt-2 sm:mt-0">
+            <div className="relative w-28 h-28 sm:w-48 sm:h-48 mx-auto mb-1 sm:mb-6 -mt-4 sm:mt-0">
               <Image
                 src="/pow_asbestos.jpg"
                 alt="Pow Property Asbestos Logo"
@@ -73,7 +73,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-3xl font-bold leading-tight text-white mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-3xl font-bold leading-tight text-white mb-2 lg:mb-3"
           >
             <span className="inline-block metallic-gold-text">POW PROPERTY ASBESTOS</span>
           </motion.h1>
@@ -102,10 +102,10 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="fixed bottom-0 left-0 right-0 px-0 sm:static sm:px-0 sm:mb-12 md:mb-16 lg:mb-20 z-40 pb-[env(safe-area-inset-bottom)]"
+            className="fixed bottom-0 left-0 right-0 px-0 sm:static sm:px-0 sm:mb-6 md:mb-8 lg:mb-10 z-40 pb-[env(safe-area-inset-bottom)]"
           >
             <div className="max-w-2xl mx-auto">
-              <div className="flex flex-col sm:flex-row sm:justify-center sm:gap-4 gap-0">
+              <div className="flex flex-col sm:flex-row sm:justify-center sm:gap-6 gap-0">
                 <Button
                   variant="secondary"
                   size="lg"
@@ -139,8 +139,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="relative py-8 px-6 md:px-10 rounded-2xl overflow-hidden max-w-2xl mx-auto metallic-gold text-black"
-            style={{ boxShadow: '0 16px 60px rgba(218, 165, 32, 0.55)' }}
+            className="relative -mt-4 lg:-mt-8 py-6 lg:py-8 px-6 md:px-10 rounded-2xl overflow-hidden max-w-2xl mx-auto metallic-gold text-black"
+            style={{ boxShadow: '0 14px 48px rgba(218, 165, 32, 0.5)' }}
           >
             <Phone className="w-16 h-16 mx-auto mb-4 text-black" />
             <h2 className="text-2xl md:text-3xl font-bold text-black mb-2 relative z-10">
@@ -231,7 +231,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.8, duration: 1 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hidden sm:block"
+          className="absolute bottom-6 left-1/2 transform -translate-x-1/2 hidden sm:block"
         >
           <div className="w-8 h-12 rounded-full flex justify-center p-2 metallic-gold-border" style={{
             borderWidth: '3px',
