@@ -37,7 +37,7 @@ const AnimatedCounter = ({ end, duration = 2, suffix = '' }: { end: number; dura
 export default function Home() {
   return (
     <div className="min-h-screen bg-black">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-6 lg:pt-8">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-6 lg:pt-8 pb-24 sm:pb-0">
         <div className="absolute inset-0">
           <Image
             src="/asbestos_roof_sheet.jpg"
@@ -49,47 +49,21 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/80" />
         </div>
 
-        <div className="absolute inset-0 opacity-20">
-          {[...Array(30)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 rounded-full"
-              style={{
-                background: 'linear-gradient(135deg, #B8860B, #FFD700, #FFF4D4, #B8860B)',
-                boxShadow: '0 0 15px rgba(218, 165, 32, 0.9), 0 0 30px rgba(255, 215, 0, 0.5)',
-              }}
-              initial={{
-                x: `${Math.random() * 100}%`,
-                y: `${Math.random() * 100}%`,
-                opacity: 0,
-              }}
-              animate={{
-                y: [`${Math.random() * 100}%`, `${Math.random() * 100}%`],
-                opacity: [0, 1, 0],
-              }}
-              transition={{
-                duration: Math.random() * 3 + 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
-            />
-          ))}
-        </div>
+
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="mb-12"
+            className="mb-6"
           >
-            <div className="relative w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-4 sm:mb-8">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#B8860B] via-[#FFD700] to-[#DAA520] opacity-30 blur-3xl rounded-full animate-pulse"></div>
+            <div className="relative w-40 h-40 sm:w-64 sm:h-64 mx-auto mb-2 sm:mb-8 -mt-2 sm:mt-0">
               <Image
                 src="/pow_asbestos.jpg"
                 alt="Pow Property Asbestos Logo"
                 fill
-                className="object-contain drop-shadow-2xl relative z-10"
+                className="object-contain relative z-10"
                 priority
               />
             </div>
@@ -101,14 +75,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
           >
-            <span
-              className="inline-block metallic-gold-text"
-              style={{
-                filter: 'drop-shadow(0 0 20px rgba(218, 165, 32, 0.8)) drop-shadow(0 0 40px rgba(255, 215, 0, 0.4))',
-              }}
-            >
-              POW PROPERTY ASBESTOS
-            </span>
+            <span className="inline-block metallic-gold-text">POW PROPERTY ASBESTOS</span>
           </motion.h1>
 
           <motion.div
@@ -117,31 +84,17 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="max-w-4xl mx-auto mb-12"
           >
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 metallic-gold-text" style={{
-              filter: 'drop-shadow(0 0 10px rgba(218, 165, 32, 0.6))',
-            }}>
-              All Aspects of Asbestos Abatement & Management Undertaken
-            </h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 metallic-gold-text">All Aspects of Asbestos Abatement & Management Undertaken</h2>
             <div className="space-y-4 text-white text-lg md:text-xl">
               <p className="flex items-center justify-center gap-2">
-                <CheckCircle className="w-6 h-6" style={{
-                  color: '#FFD700',
-                  filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.8))'
-                }} />
+                <CheckCircle className="w-6 h-6" style={{ color: '#FFD700' }} />
                 Commercial & Residential Asbestos Removals
               </p>
               <p className="flex items-center justify-center gap-2">
-                <CheckCircle className="w-6 h-6" style={{
-                  color: '#FFD700',
-                  filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.8))'
-                }} />
+                <CheckCircle className="w-6 h-6" style={{ color: '#FFD700' }} />
                 Small One-Off Removals to Large Complex Ongoing Management Contracts
               </p>
-              <p className="text-2xl font-bold mt-6 metallic-gold-text" style={{
-                filter: 'drop-shadow(0 0 10px rgba(218, 165, 32, 0.7))',
-              }}>
-                The Number 1 Choice for Asbestos Removals in the South
-              </p>
+              <p className="text-2xl font-bold mt-6 metallic-gold-text">The Number 1 Choice for Asbestos Removals in the South</p>
             </div>
           </motion.div>
 
@@ -149,46 +102,42 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-10 absolute bottom-6 left-0 right-0 px-4 sm:static sm:px-0 z-20"
+            className="fixed bottom-4 left-0 right-0 px-4 sm:static sm:px-0 z-30 pb-[env(safe-area-inset-bottom)]"
           >
-            <Button
-              variant="secondary"
-              size="lg"
-              onClick={() => window.location.href = '/contact'}
-              className="w-full sm:w-auto font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 text-black relative overflow-hidden group metallic-gold"
-              style={{
-                border: 'none',
-                boxShadow: '0 8px 30px rgba(218, 165, 32, 0.6), 0 0 60px rgba(255, 215, 0, 0.3), inset 0 2px 10px rgba(255, 244, 212, 0.5)',
-              }}
-            >
-              <span className="relative z-10 font-bold" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Get Free Consultation</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => window.location.href = 'tel:01202001771'}
-              className="w-full sm:w-auto font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 relative overflow-hidden group metallic-gold-border"
-              style={{
-                borderWidth: '3px',
-                color: '#FFD700',
-                textShadow: '0 0 10px rgba(218, 165, 32, 0.8)',
-                boxShadow: '0 4px 20px rgba(218, 165, 32, 0.4)',
-              }}
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              <span className="relative z-10">Call Now</span>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-3xl mx-auto">
+              <Button
+                variant="secondary"
+                size="lg"
+                onClick={() => window.location.href = '/contact'}
+                className="w-full sm:w-auto font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 text-black relative overflow-hidden group"
+                style={{
+                  border: 'none'
+                }}
+              >
+                <span className="relative z-10 font-bold">Get Free Consultation</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => window.location.href = 'tel:01202001771'}
+                className="w-full sm:w-auto font-bold text-lg px-6 py-3 sm:px-8 sm:py-6 relative overflow-hidden"
+                style={{
+                  borderWidth: '3px',
+                  color: '#FFD700'
+                }}
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                <span className="relative z-10">Call Now</span>
+              </Button>
+            </div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="relative py-10 px-6 md:px-12 rounded-2xl overflow-hidden max-w-4xl mx-auto metallic-gold"
-            style={{
-              boxShadow: '0 20px 80px rgba(218, 165, 32, 0.7), 0 0 120px rgba(255, 215, 0, 0.5) inset, inset 0 5px 20px rgba(255, 248, 220, 0.5), inset 0 -5px 20px rgba(92, 79, 61, 0.5)',
-            }}
+            className="relative py-10 px-6 md:px-12 rounded-2xl overflow-hidden max-w-4xl mx-auto bg-white shadow-2xl"
           >
             <Phone className="w-16 h-16 mx-auto mb-4 text-black" />
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-2 relative z-10">
@@ -229,13 +178,11 @@ export default function Home() {
             <div className="bg-gradient-to-br from-gray-900 to-black rounded-lg overflow-hidden relative p-8 metallic-gold-border"
               style={{
                 borderWidth: '3px',
-                boxShadow: '0 10px 40px rgba(218, 165, 32, 0.4), inset 0 0 30px rgba(255, 215, 0, 0.1)',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
               }}
             >
-              <div className="text-5xl font-bold mb-2 metallic-gold-text" style={{
-                filter: 'drop-shadow(0 0 10px rgba(218, 165, 32, 0.8))',
-              }}>
-                <AnimatedCounter end={2500} suffix="+" />
+              <div className="text-4xl sm:text-5xl font-bold mb-2 metallic-gold-text">
+                <AnimatedCounter end={500} suffix="+" />
               </div>
               <p className="text-white text-lg">Successful Asbestos Removal Jobs</p>
               <div className="mt-4 h-2 bg-gray-800 rounded-full overflow-hidden">
@@ -245,7 +192,7 @@ export default function Home() {
                   animate={{ width: '100%' }}
                   transition={{ duration: 2, delay: 1.7 }}
                   style={{
-                    boxShadow: '0 0 10px rgba(218, 165, 32, 0.8)',
+                    boxShadow: '0 0 6px rgba(0,0,0,0.2)',
                   }}
                 />
               </div>
@@ -254,12 +201,10 @@ export default function Home() {
             <div className="bg-gradient-to-br from-gray-900 to-black rounded-lg overflow-hidden relative p-8 metallic-gold-border"
               style={{
                 borderWidth: '3px',
-                boxShadow: '0 10px 40px rgba(218, 165, 32, 0.4), inset 0 0 30px rgba(255, 215, 0, 0.1)',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
               }}
             >
-              <div className="text-5xl font-bold mb-2 metallic-gold-text" style={{
-                filter: 'drop-shadow(0 0 10px rgba(218, 165, 32, 0.8))',
-              }}>
+              <div className="text-4xl sm:text-5xl font-bold mb-2 metallic-gold-text">
                 <AnimatedCounter end={25} suffix="+" />
               </div>
               <p className="text-white text-lg">Years Experience in Asbestos Industry</p>
@@ -268,12 +213,10 @@ export default function Home() {
             <div className="bg-gradient-to-br from-gray-900 to-black rounded-lg overflow-hidden relative p-8 metallic-gold-border"
               style={{
                 borderWidth: '3px',
-                boxShadow: '0 10px 40px rgba(218, 165, 32, 0.4), inset 0 0 30px rgba(255, 215, 0, 0.1)',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
               }}
             >
-              <div className="text-5xl font-bold mb-2 metallic-gold-text" style={{
-                filter: 'drop-shadow(0 0 10px rgba(218, 165, 32, 0.8))',
-              }}>
+              <div className="text-4xl sm:text-5xl font-bold mb-2 metallic-gold-text">
                 <AnimatedCounter end={100} suffix="%" />
               </div>
               <p className="text-white text-lg">Client Satisfaction Rate</p>
@@ -289,7 +232,7 @@ export default function Home() {
         >
           <div className="w-8 h-12 rounded-full flex justify-center p-2 metallic-gold-border" style={{
             borderWidth: '3px',
-            boxShadow: '0 5px 20px rgba(218, 165, 32, 0.6)',
+            boxShadow: '0 5px 12px rgba(0,0,0,0.12)',
           }}>
             <motion.div
               animate={{ y: [0, 16, 0] }}
@@ -297,7 +240,7 @@ export default function Home() {
               className="w-2 h-3 rounded-full"
               style={{
                 background: 'linear-gradient(135deg, #B8860B, #FFD700, #FFF4D4)',
-                boxShadow: '0 0 8px rgba(218, 165, 32, 0.9)',
+                boxShadow: '0 0 6px rgba(0,0,0,0.08)',
               }}
             />
           </div>
@@ -313,19 +256,14 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-              Why Choose <span className="metallic-gold-text" style={{
-                filter: 'drop-shadow(0 2px 8px rgba(218, 165, 32, 0.6))',
-              }}>Pow Asbestos</span>?
+              Why Choose <span className="metallic-gold-text">Pow Asbestos</span>?
             </h2>
             <div className="max-w-4xl mx-auto space-y-6 text-left">
               <div className="flex items-start gap-4 bg-gray-50 p-6 rounded-lg border-l-4" style={{
                 borderLeftColor: '#DAA520',
-                boxShadow: '-4px 0 15px rgba(218, 165, 32, 0.3)',
+                boxShadow: '-4px 0 15px rgba(0,0,0,0.06)',
               }}>
-                <Award className="w-8 h-8 flex-shrink-0 mt-1" style={{
-                  color: '#DAA520',
-                  filter: 'drop-shadow(0 0 6px rgba(218, 165, 32, 0.8))',
-                }} />
+                <Award className="w-8 h-8 flex-shrink-0 mt-1" style={{ color: '#DAA520' }} />
                 <div>
                   <h3 className="text-xl font-bold text-black mb-2">Over 25 Years Experience</h3>
                   <p className="text-gray-700">
@@ -336,12 +274,9 @@ export default function Home() {
 
               <div className="flex items-start gap-4 bg-gray-50 p-6 rounded-lg border-l-4" style={{
                 borderLeftColor: '#DAA520',
-                boxShadow: '-4px 0 15px rgba(218, 165, 32, 0.3)',
+                boxShadow: '-4px 0 15px rgba(0,0,0,0.06)',
               }}>
-                <MapPin className="w-8 h-8 flex-shrink-0 mt-1" style={{
-                  color: '#DAA520',
-                  filter: 'drop-shadow(0 0 6px rgba(218, 165, 32, 0.8))',
-                }} />
+                <MapPin className="w-8 h-8 flex-shrink-0 mt-1" style={{ color: '#DAA520' }} />
                 <div>
                   <h3 className="text-xl font-bold text-black mb-2">Comprehensive Coverage</h3>
                   <p className="text-gray-700">
@@ -352,12 +287,9 @@ export default function Home() {
 
               <div className="flex items-start gap-4 bg-gray-50 p-6 rounded-lg border-l-4" style={{
                 borderLeftColor: '#DAA520',
-                boxShadow: '-4px 0 15px rgba(218, 165, 32, 0.3)',
+                boxShadow: '-4px 0 15px rgba(0,0,0,0.06)',
               }}>
-                <Shield className="w-8 h-8 flex-shrink-0 mt-1" style={{
-                  color: '#DAA520',
-                  filter: 'drop-shadow(0 0 6px rgba(218, 165, 32, 0.8))',
-                }} />
+                <Shield className="w-8 h-8 flex-shrink-0 mt-1" style={{ color: '#DAA520' }} />
                 <div>
                   <h3 className="text-xl font-bold text-black mb-2">Fully Qualified & Certified</h3>
                   <p className="text-gray-700">
@@ -368,12 +300,9 @@ export default function Home() {
 
               <div className="flex items-start gap-4 bg-gray-50 p-6 rounded-lg border-l-4" style={{
                 borderLeftColor: '#DAA520',
-                boxShadow: '-4px 0 15px rgba(218, 165, 32, 0.3)',
+                boxShadow: '-4px 0 15px rgba(0,0,0,0.06)',
               }}>
-                <Star className="w-8 h-8 flex-shrink-0 mt-1" style={{
-                  color: '#DAA520',
-                  filter: 'drop-shadow(0 0 6px rgba(218, 165, 32, 0.8))',
-                }} />
+                <Star className="w-8 h-8 flex-shrink-0 mt-1" style={{ color: '#DAA520' }} />
                 <div>
                   <h3 className="text-xl font-bold text-black mb-2">Flexible Service Options</h3>
                   <p className="text-gray-700">
@@ -394,42 +323,30 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center max-w-5xl mx-auto mb-16">
               <div className="bg-black p-6 rounded-lg flex flex-col items-center justify-center h-40 metallic-gold-border" style={{
                 borderWidth: '3px',
-                boxShadow: '0 8px 30px rgba(218, 165, 32, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.1)',
+                boxShadow: '0 8px 20px rgba(0,0,0,0.25)',
               }}>
-                <Award className="w-12 h-12 mb-2" style={{
-                  color: '#FFD700',
-                  filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.9))',
-                }} />
+                <Award className="w-12 h-12 mb-2" style={{ color: '#FFD700' }} />
                 <p className="font-bold text-center metallic-gold-text">ISO 9001</p>
               </div>
               <div className="bg-black p-6 rounded-lg flex flex-col items-center justify-center h-40 metallic-gold-border" style={{
                 borderWidth: '3px',
-                boxShadow: '0 8px 30px rgba(218, 165, 32, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.1)',
+                boxShadow: '0 8px 20px rgba(0,0,0,0.25)',
               }}>
-                <Award className="w-12 h-12 mb-2" style={{
-                  color: '#FFD700',
-                  filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.9))',
-                }} />
+                <Award className="w-12 h-12 mb-2" style={{ color: '#FFD700' }} />
                 <p className="font-bold text-center metallic-gold-text">ISO 14001</p>
               </div>
               <div className="bg-black p-6 rounded-lg flex flex-col items-center justify-center h-40 metallic-gold-border" style={{
                 borderWidth: '3px',
-                boxShadow: '0 8px 30px rgba(218, 165, 32, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.1)',
+                boxShadow: '0 8px 20px rgba(0,0,0,0.25)',
               }}>
-                <Award className="w-12 h-12 mb-2" style={{
-                  color: '#FFD700',
-                  filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.9))',
-                }} />
+                <Award className="w-12 h-12 mb-2" style={{ color: '#FFD700' }} />
                 <p className="font-bold text-center metallic-gold-text">ISO 45001</p>
               </div>
               <div className="bg-black p-6 rounded-lg flex flex-col items-center justify-center h-40 col-span-2 md:col-span-1 metallic-gold-border" style={{
                 borderWidth: '3px',
-                boxShadow: '0 8px 30px rgba(218, 165, 32, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.1)',
+                boxShadow: '0 8px 20px rgba(0,0,0,0.25)',
               }}>
-                <Shield className="w-12 h-12 mb-2" style={{
-                  color: '#FFD700',
-                  filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.9))',
-                }} />
+                <Shield className="w-12 h-12 mb-2" style={{ color: '#FFD700' }} />
                 <p className="font-bold text-center text-sm metallic-gold-text">Protected by Peninsula</p>
               </div>
 
@@ -469,11 +386,9 @@ export default function Home() {
               </div>
               <div className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-lg metallic-gold-border" style={{
                 borderWidth: '3px',
-                boxShadow: '0 10px 40px rgba(218, 165, 32, 0.4), inset 0 0 30px rgba(255, 215, 0, 0.1)',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
               }}>
-                <h4 className="font-bold text-xl mb-3 metallic-gold-text" style={{
-                  filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.7))',
-                }}>Safety First</h4>
+                <h4 className="font-bold text-xl mb-3 metallic-gold-text">Safety First</h4>
                 <p className="text-white">All our work sites are properly labeled and secured with appropriate warning signage to ensure maximum safety.</p>
               </div>
             </div>
@@ -490,9 +405,7 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Understanding <span className="metallic-gold-text" style={{
-                filter: 'drop-shadow(0 0 15px rgba(218, 165, 32, 0.8))',
-              }}>Asbestos Types</span>
+              Understanding <span className="metallic-gold-text">Asbestos Types</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Knowledge is key to safety. Learn about the different types of asbestos and why professional identification and removal is essential.
@@ -507,7 +420,7 @@ export default function Home() {
           >
             <div className="relative rounded-2xl overflow-hidden metallic-gold-border shadow-2xl" style={{
               borderWidth: '2px',
-              boxShadow: '0 20px 80px rgba(218, 165, 32, 0.7), 0 0 100px rgba(255, 215, 0, 0.4)',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.12)',
             }}>
               <div className="relative w-full h-72 sm:h-96 md:h-[600px] lg:h-[1000px]">
                 <Image
@@ -522,7 +435,7 @@ export default function Home() {
             </div>
             <div className="mt-8 bg-gray-900 p-8 rounded-lg metallic-gold-border" style={{
               borderWidth: '3px',
-              boxShadow: '0 10px 40px rgba(218, 165, 32, 0.5), inset 0 0 30px rgba(255, 215, 0, 0.1)',
+              boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
             }}>
               <p className="text-white text-lg leading-relaxed">
                 All six types of asbestos are hazardous and require professional handling. Our certified team has the expertise to identify, safely remove, and dispose of all asbestos types in compliance with HSE regulations. Don't risk your health - contact us for a professional assessment.
@@ -559,9 +472,7 @@ export default function Home() {
             className="text-center max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Ready to Work With the <span className="metallic-gold-text" style={{
-                filter: 'drop-shadow(0 0 15px rgba(218, 165, 32, 0.9))',
-              }}>Best in the South</span>?
+              Ready to Work With the <span className="metallic-gold-text">Best in the South</span>?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
               Get your free, no obligation consultation today and discover why we're the number 1 choice for asbestos removals for commercial and residential projects across the South of England.
@@ -574,7 +485,7 @@ export default function Home() {
                 className="text-black font-bold text-xl px-6 py-3 sm:px-12 sm:py-6 relative overflow-hidden group metallic-gold"
                 style={{
                   border: 'none',
-                  boxShadow: '0 10px 40px rgba(218, 165, 32, 0.7), 0 0 80px rgba(255, 215, 0, 0.4), inset 0 2px 15px rgba(255, 244, 212, 0.5)',
+                  boxShadow: '0 10px 20px rgba(0,0,0,0.25)',
                 }}
               >
                 <span className="relative z-10 font-bold" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Request Free Consultation</span>
@@ -588,8 +499,7 @@ export default function Home() {
                 style={{
                   borderWidth: '3px',
                   color: '#FFD700',
-                  textShadow: '0 0 10px rgba(218, 165, 32, 0.9)',
-                  boxShadow: '0 5px 25px rgba(218, 165, 32, 0.5)',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
                 }}
               >
                 <Phone className="w-6 h-6 mr-2" />
@@ -603,45 +513,30 @@ export default function Home() {
       <footer className="bg-gradient-to-b from-black to-gray-900 py-12" style={{
         borderTop: '3px solid transparent',
         borderImage: 'linear-gradient(90deg, #6B5D4F, #B8860B, #DAA520, #FFD700, #FFF4D4, #FFD700, #DAA520, #B8860B, #6B5D4F) 1',
-        boxShadow: 'inset 0 3px 20px rgba(218, 165, 32, 0.3)',
+        boxShadow: 'inset 0 3px 20px rgba(0,0,0,0.06)',
       }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
-              <h3 className="font-bold text-xl mb-4 metallic-gold-text" style={{
-                filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.8))',
-              }}>Contact Us</h3>
+              <h3 className="font-bold text-xl mb-4 metallic-gold-text">Contact Us</h3>
               <p className="text-white mb-2">Phone: 01202 001771</p>
               <p className="text-white mb-2">Email: Info@powpropertyasbestos.co.uk</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl mb-4 metallic-gold-text" style={{
-                filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.8))',
-              }}>Coverage Area</h3>
+              <h3 className="font-bold text-xl mb-4 metallic-gold-text">Coverage Area</h3>
               <p className="text-white">Covering Bournemouth, Poole & surrounding areas</p>
               <p className="text-white">South of England</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl mb-4 metallic-gold-text" style={{
-                filter: 'drop-shadow(0 0 8px rgba(218, 165, 32, 0.8))',
-              }}>Follow Us</h3>
+              <h3 className="font-bold text-xl mb-4 metallic-gold-text">Follow Us</h3>
               <div className="flex justify-center md:justify-start gap-4">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform" style={{
-                  color: '#FFD700',
-                  filter: 'drop-shadow(0 0 6px rgba(218, 165, 32, 0.7))',
-                }}>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform" style={{ color: '#FFD700' }}>
                   <Linkedin className="w-6 h-6" />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform" style={{
-                  color: '#FFD700',
-                  filter: 'drop-shadow(0 0 6px rgba(218, 165, 32, 0.7))',
-                }}>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform" style={{ color: '#FFD700' }}>
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform" style={{
-                  color: '#FFD700',
-                  filter: 'drop-shadow(0 0 6px rgba(218, 165, 32, 0.7))',
-                }}>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform" style={{ color: '#FFD700' }}>
                   <Facebook className="w-6 h-6" />
                 </a>
               </div>
@@ -655,15 +550,9 @@ export default function Home() {
               © {new Date().getFullYear()} Pow Property Asbestos. All rights reserved.
             </p>
             <div className="flex justify-center gap-6 mt-4">
-              <Link href="/privacy" className="hover:scale-105 transition-transform metallic-gold-text" style={{
-                filter: 'drop-shadow(0 0 6px rgba(218, 165, 32, 0.6))',
-              }}>Privacy</Link>
-              <Link href="/terms" className="hover:scale-105 transition-transform metallic-gold-text" style={{
-                filter: 'drop-shadow(0 0 6px rgba(218, 165, 32, 0.6))',
-              }}>Terms</Link>
-              <Link href="/cookies" className="hover:scale-105 transition-transform metallic-gold-text" style={{
-                filter: 'drop-shadow(0 0 6px rgba(218, 165, 32, 0.6))',
-              }}>Cookies</Link>
+              <Link href="/privacy" className="hover:scale-105 transition-transform metallic-gold-text">Privacy</Link>
+              <Link href="/terms" className="hover:scale-105 transition-transform metallic-gold-text">Terms</Link>
+              <Link href="/cookies" className="hover:scale-105 transition-transform metallic-gold-text">Cookies</Link>
             </div>
           </div>
         </div>

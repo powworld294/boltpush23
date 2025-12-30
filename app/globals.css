@@ -59,36 +59,21 @@ html {
   }
 }
 
-@keyframes metallic-shine {
-  0% {
-    background-position: -200% center;
-  }
-  50% {
-    background-position: 200% center;
-  }
-  100% {
-    background-position: -200% center;
-  }
-}
+/* Removed metallic shine and gold pulse animations to reduce glow */
+@keyframes metallic-shine {}
 
-@keyframes gold-pulse {
-  0%, 100% {
-    filter: brightness(1) contrast(1);
-  }
-  50% {
-    filter: brightness(1.1) contrast(1.05);
-  }
-}
+@keyframes gold-pulse {}
 
 .animate-shimmer {
-  animation: shimmer 3s linear infinite;
+  animation: none;
 }
 
 .animate-metallic-shine {
-  animation: metallic-shine 4s ease-in-out infinite;
+  animation: none;
 }
 
 .metallic-gold {
+  /* Subtle gold background without shimmer */
   background: linear-gradient(
     135deg,
     #5C4F3D 0%,
@@ -102,25 +87,16 @@ html {
     #B8860B 90%,
     #5C4F3D 100%
   );
-  background-size: 200% auto;
+  background-size: auto;
 }
 
 .metallic-gold-text {
-  background: linear-gradient(
-    135deg,
-    #6B5D4F 0%,
-    #B8860B 20%,
-    #DAA520 35%,
-    #FFD700 50%,
-    #FFF8DC 60%,
-    #FFD700 70%,
-    #DAA520 85%,
-    #6B5D4F 100%
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  /* Use a single gold color for legibility and remove background-clip shimmer */
+  color: var(--gold-rich);
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
 }
 
 .metallic-gold-border {
