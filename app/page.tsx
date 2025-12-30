@@ -51,7 +51,7 @@ export default function Home() {
 
 
 
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-5xl">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -73,7 +73,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-bold leading-tight text-white mb-4"
           >
             <span className="inline-block metallic-gold-text">POW PROPERTY ASBESTOS</span>
           </motion.h1>
@@ -84,7 +84,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="max-w-4xl mx-auto mb-12"
           >
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 metallic-gold-text">All Aspects of Asbestos Abatement & Management Undertaken</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 metallic-gold-text">All Aspects of Asbestos Abatement & Management Undertaken</h2>
             <div className="space-y-4 text-white text-lg md:text-xl">
               <p className="flex items-center justify-center gap-2">
                 <CheckCircle className="w-6 h-6" style={{ color: '#FFD700' }} />
@@ -176,7 +176,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.4, duration: 1 }}
-            className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-16"
+            className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto mt-12"
           >
             <div className="bg-gradient-to-br from-gray-900 to-black rounded-lg overflow-hidden relative p-8 metallic-gold-border"
               style={{
@@ -184,7 +184,7 @@ export default function Home() {
                 boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
               }}
             >
-              <div className="text-4xl sm:text-5xl font-bold mb-2 metallic-gold-text">
+              <div className="text-3xl sm:text-4xl font-bold mb-2 metallic-gold-text">
                 <AnimatedCounter end={500} suffix="+" />
               </div>
               <p className="text-white text-lg">Successful Asbestos Removal Jobs</p>
@@ -207,7 +207,7 @@ export default function Home() {
                 boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
               }}
             >
-              <div className="text-4xl sm:text-5xl font-bold mb-2 metallic-gold-text">
+              <div className="text-3xl sm:text-4xl font-bold mb-2 metallic-gold-text">
                 <AnimatedCounter end={25} suffix="+" />
               </div>
               <p className="text-white text-lg">Years Experience in Asbestos Industry</p>
@@ -219,7 +219,7 @@ export default function Home() {
                 boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
               }}
             >
-              <div className="text-4xl sm:text-5xl font-bold mb-2 metallic-gold-text">
+              <div className="text-3xl sm:text-4xl font-bold mb-2 metallic-gold-text">
                 <AnimatedCounter end={100} suffix="%" />
               </div>
               <p className="text-white text-lg">Client Satisfaction Rate</p>
