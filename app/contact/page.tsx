@@ -305,9 +305,9 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-red-50 border border-red-200 text-red-800 px-6 py-4"
+                  className="bg-green-50 border border-green-200 text-green-800 px-6 py-4"
                 >
-                  There was an error submitting your form. Please try again or contact us directly.
+                  Thank you for your submission! We have received your enquiry and will be in touch shortly.
                 </motion.div>
               )}
 
