@@ -51,7 +51,7 @@ export default function Home() {
 
 
 
-        <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-5xl">
+        <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl lg:max-w-3xl">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -419,19 +419,19 @@ export default function Home() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-5xl mx-auto"
+            className="max-w-4xl mx-auto"
           >
             <div className="relative rounded-2xl overflow-hidden metallic-gold-border shadow-2xl" style={{
               borderWidth: '2px',
               boxShadow: '0 20px 60px rgba(0,0,0,0.12)',
             }}>
-              <div className="relative w-full h-72 sm:h-96 md:h-[600px] lg:h-[1000px]">
+              <div className="relative w-full h-72 sm:h-96 md:h-[480px] lg:h-[560px] xl:h-[600px]">
                 <Image
                   src="/ebbf3790-ee9e-4d50-91ad-babebf3c62a8.png"
                   alt="Types of Asbestos - Chrysotile, Amosite, Crocidolite, Anthophyllite"
                   fill
-                  className="object-contain sm:object-cover object-center"
-                  style={{ objectPosition: 'center' }}
+                  className="object-cover object-top"
+                  style={{ objectPosition: 'top' }}
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
@@ -480,29 +480,28 @@ export default function Home() {
             <p className="text-xl text-gray-300 mb-12">
               Get your free, no obligation consultation today and discover why we're the number 1 choice for asbestos removals for commercial and residential projects across the South of England.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center items-center">
               <Button
                 variant="secondary"
                 size="lg"
                 onClick={() => window.location.href = '/contact'}
-                className="text-black font-bold text-xl px-6 py-3 sm:px-12 sm:py-6 relative overflow-hidden group metallic-gold"
+                className="text-black font-bold text-lg md:text-xl px-6 md:px-10 py-3 md:py-4 relative overflow-hidden group metallic-gold"
                 style={{
                   border: 'none',
-                  boxShadow: '0 10px 20px rgba(0,0,0,0.25)',
+                  boxShadow: '0 8px 30px rgba(218, 165, 32, 0.45)'
                 }}
               >
-                <span className="relative z-10 font-bold" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Request Free Consultation</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                <span className="relative z-10 font-bold">Request Free Consultation</span>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 onClick={() => window.location.href = 'tel:01202001771'}
-                className="font-bold text-xl px-6 py-3 sm:px-12 sm:py-6 metallic-gold-border"
+                className="font-bold text-lg md:text-xl px-6 md:px-10 py-3 md:py-4 metallic-gold-border"
                 style={{
                   borderWidth: '3px',
                   color: '#FFD700',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                  boxShadow: '0 4px 12px rgba(218,165,32,0.25)'
                 }}
               >
                 <Phone className="w-6 h-6 mr-2" />
